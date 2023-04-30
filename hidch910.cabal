@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hidch910
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/basilz/hidch910#readme>
+homepage:       https://github.com/basilz/hidch910#readme
+bug-reports:    https://github.com/basilz/hidch910/issues
+author:         Andrea Basile
+maintainer:     andrea.r.basile@gmail.com
+copyright:      2023 Andrea Basile
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/basilz/hidch910
+
+library
+  exposed-modules:
+      Functions
+  other-modules:
+      Paths_hidch910
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable hidch910-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hidch910
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , criterion
+    , deepseq
+    , hidch910
+  default-language: Haskell2010
+
+test-suite hidch910-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hidch910
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hidch910
+  default-language: Haskell2010
